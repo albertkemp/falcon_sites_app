@@ -1,6 +1,7 @@
 let code = "";
             var mainpreview = document.getElementById("mainpreview");
 const color = document.getElementById("backgroundColor");
+color.value = "#ffffff";
 color.addEventListener('change', addColor);
 let currentTextColor = "#000000"; 
 
@@ -11,6 +12,7 @@ function addMyLink() {
     link.href = url; 
     link.innerHTML = content;
     mainpreview.appendChild(link);
+    modal.style.display = "none";
 }
 function addColor() {
   let selectedColor = color.value;
@@ -116,11 +118,6 @@ btn.onclick = function() {
 }
 span.onclick = function() {
   modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 }
 function addButton() {
   var aInput = document.createElement("input");
