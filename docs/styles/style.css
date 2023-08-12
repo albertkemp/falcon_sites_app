@@ -1,115 +1,94 @@
-input:focus {
-    outline: none;
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
   }
+  
+  /* Remove default list styles */
+  ul {
+    list-style: none;
+  }
+  
+  /* Ensure full viewport height */
+  html, body {
+    height: 100%;
+  }
+  
+  /* Ensure full width and height for modal */
+  .modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  
+  /* Improved responsive styles */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e3bd42;
+    overflow-x: hidden;
+  }
+  
+  #mainenclosure {
+    background: #ffe8b7;
+    border-radius: 10px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #side {
+    background-color: #ffebb5;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  #mainpreview {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    margin-top: 20px;
+  }
+  
+  #side button,
+  .close {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .close {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  button:hover,
+  .close:hover {
+    opacity: 0.8;
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media only screen and (max-width: 768px) {
     #mainenclosure {
-        background: rgb(255, 242, 216);
-        border-radius: 3px;
-        height: 80%;
-        width: 99%;
-        top: 3px;
-        right: 5px;
+      flex-direction: column;
     }
-    body {
-        background-color: rgb(227, 189, 66);
-        font-family: 'Open Sans', sans-serif;
-       scrollbar-width: none;
-    }
-    #side {
-        background-color: rgb(255, 230, 181);
-        left: 10px;
-        height: 80%;
-        top: 0px;
-        border-radius: 3px;
-        width: 40%;
-        padding: 20px;
-    }
+  
+    #side,
     #mainpreview {
-        background-color: white;
-        width: 60%;
-        border-radius: 3px;
-        right: 10px;
-        top: 40px;
-        height: 80%;
-        position: absolute;
-        padding: 20px;
+      width: 100%;
     }
-    /* The Modal (background) */
-.modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-padding-top: 100px; /* Location of the box */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: rgb(0,0,0); /* Fallback color */
-background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-background-color: #fefefe;
-margin: auto;
-padding: 20px;
-border: 1px solid #888;
-width: 80%;
-}
-
-/* The Close Button */
-.close {
-color: #aaaaaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-color: #000;
-text-decoration: none;
-cursor: pointer;
-}
-button {
-padding: 3px;
-border-radius: 5px;
-background-color: green;
-color: white;
-min-width: 100px;
-border: none;
-font-size: 20px;
-font-family: 'Open Sans', sans-serif;
-}
-button:hover {
-opacity: 50%;
-cursor: pointer;
-}
-
-.hero-image {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/theme1.JPG");
-height: 50%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-}
-
-.hero-text {
-text-align: center;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-}
-#title {
-position: absolute;
-top: 100px;
-right: 100px;
-}
-#videoplayer {
-position: absolute;
-left: 150px;
-top: 300px;
-}
+  
+    #videoplayer {
+      left: 20px;
+      top: 250px;
+    }
+  }
+  input[type=color]:hover{cursor: pointer;}
+  
